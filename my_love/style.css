@@ -1,0 +1,110 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #5f4b8b, #6a7ce8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+
+.card{
+  background: white;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+button{
+  background: #6a7ce8;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover{
+  background: #5f4b8b;
+}
+
+#complimentText{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5f4b8b;
+  min-height: 40px;
+  transition: .3s;
+}
+
+/* Bənövşəyi ürəklər */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: fly 1s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes fly {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.5);
+  }
+}
+
+/* Qırmızı ürəklər */
+.red-heart {
+  position: absolute;
+  font-size: 20px;
+  animation: floatUp 1.2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(1.4);
+  }
+}
+
+/* MOBİL ÜÇÜN */
+@media (max-width: 480px) {
+
+  body{
+    padding: 10px;
+  }
+
+  .card{
+    width: 90%;
+    padding: 20px;
+  }
+
+  .heart,
+  .red-heart{
+    font-size: 16px; /* mobil üçün ürəklər kiçik */
+  }
+
+  #complimentText{
+    font-size: 16px;
+  }
+
+  button{
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+}
